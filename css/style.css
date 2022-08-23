@@ -1,0 +1,260 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.topbar {
+    position: fixed;
+    background: #fff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08);
+    width: 100%;
+    height: 60px;
+    z-index: 1;
+}
+.logo h2 {
+    color: #3280dc;
+}
+.search {
+    width: 50%;
+    position: relative;
+}
+.search i {
+    position: absolute;
+    top: 12px;
+    right: 25px;
+    cursor: pointer;
+    color: #3280dc;
+}
+.search input {
+    height: 40px;
+    border: none;
+    outline: none !important;
+    border-radius: 10px;
+    background: #f5f5f5;
+    padding: 0 40px;
+}
+.search .form-control:focus {
+    color: #495057;
+    background-color: #f5f5f5;
+    border-color: unset;
+    outline: 0;
+    box-shadow: unset;
+}
+.user {
+    position: relative;
+    width: 50px;
+    height: 50px;
+}
+.user img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* sidebar */
+.sidebar {
+    position: fixed;
+    top: 60px;
+    width: 260px;
+    height: calc(100% - 60px);
+    background: #3280dc;
+    overflow-x: hidden;
+}
+.sidebar ul li {
+    width: 100%;
+    list-style: none;
+}
+.sidebar ul li:hover {
+    background: #fff;
+}
+.sidebar ul li:hover a {
+    color: #3280dc;
+}
+.sidebar ul li a {
+    width: 100%;
+    text-decoration: none;
+    color: #fff;
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+.sidebar ul li a i {
+    min-width: 60px;
+    font-size: 24px;
+    text-align: center;
+}
+/* Main Section */
+.main {
+    position: absolute;
+    top: 60px;
+    width: calc(100% - 260px);
+    left: 260px;
+    min-height: calc(100vh - 60px);
+    background: #f5f5f5;
+}
+.business_card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 7px 25px 0 rgba(0, 0, 0, 0.08);
+}
+.business_card:hover {
+    background: #3280dc;
+}
+.business_card:hover .card_number {
+    color: #fff;
+}
+.business_card:hover .card_name {
+    color: #fff;
+}
+.business_card:hover .card_icon {
+    color: #fff;
+}
+.business_card:hover p {
+    color: #fff;
+    opacity: 0.6;
+}
+.card_number {
+    font-size: 36px;
+    font-weight: 500;
+    color: #3280dc;
+}
+.card_name {
+    color: #888;
+    font-weight: 600;
+}
+.business_card p {
+    color: #888;
+    font-size: 14px;
+}
+.card_icon {
+    font-size: 45px;
+    color: #3280dc;
+}
+/* Charts Section */
+.business_chart {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 7px 25px 0 rgba(0, 0, 0, 0.08);
+    width: 32%;
+}
+.business_chart2 {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 7px 25px 0 rgba(0, 0, 0, 0.08);
+    width: 49%;
+}
+.business_chart h2 {
+    font-size: 20px;
+    color: #666;
+    text-align: center;
+}
+.business_chart2 h2 {
+    font-size: 20px;
+    color: #666;
+    text-align: center;
+}
+.fa-bell {
+    cursor: pointer;
+    color: #3280dc;
+}
+/* Responsive */
+@media (max-width: 1115px) {
+    .sidebar {
+        width: 60px;
+    }
+    .main {
+        left: 60px;
+        width: calc(100% - 60px);
+    }
+    .business_chart {
+        width: 49%;
+    }
+    .charts .business_chart:nth-child(3) {
+        margin: 20px 0 !important;
+        width: 100%;
+    }
+    .sign_in_div {
+        min-width: 60% !important;
+    }
+}
+@media (max-width: 768px) {
+    .business_chart, .business_chart2 {
+        width: 100%;
+    }
+    .cards .business_card:nth-child(2) {
+        margin: 20px 0 !important;
+    }
+
+    .charts .business_chart:nth-child(2) {
+        margin: 20px 0 !important;
+    }
+    .charts .business_chart2:nth-child(2) {
+        margin: 20px 0 !important;
+    }
+    .search {
+        margin-left: 1rem;
+    }
+}
+@media (max-width: 500px) {
+    .business_chart {
+        width: 100%;
+    }
+    .search input {
+        font-size: 12px;
+    }
+    .logo h2 {
+        font-size: 24px;
+    }
+    .card_number {
+        font-size: 24px;
+        font-weight: 500;
+        color: #3280dc;
+    }
+    .card_name {
+        font-size: 14px;
+    }
+
+    .business_card p {
+        color: #888;
+        font-size: 12px;
+    }
+    .card_icon {
+        font-size: 28px;
+        color: #3280dc;
+    }
+    .business_chart h2 {
+        font-size: 16px;
+    }
+    .business_chart2 h2 {
+        font-size: 16px;
+        color: #666;
+        text-align: center;
+    }
+}
+
+/* Sign In Page */
+.sign_in {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+.sign_in_div {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 7px 25px 0 rgba(0, 0, 0, 0.08);
+}
+.sign_in_div label {
+    color: #888;
+    font-size: 14px;
+}
+.sign_in_div input {
+    outline: none;
+    height: 40px;
+    font-size: 14px;
+}
+.sign_in_div button {
+    background: #3280dc;
+}

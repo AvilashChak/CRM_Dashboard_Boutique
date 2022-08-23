@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRM-Dashboard-Boutique</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/bootstrap-4.6.2-dist/css/bootstrap.min.css">
+    <script src="/js/jquery-3.5.1.min.js"></script>
+    <script src="/css/bootstrap-4.6.2-dist/js/bootstrap.bundle.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
+
+</head>
+<body>
+    <div class="container-fluid px-0">
+        <div class="topbar d-flex px-4 py-0 align-items-center justify-content-between">
+            <div class="logo">
+                <h2>Boutique</h2>
+            </div>
+            <div class="search d-flex align-items-center">
+                <input type="text" class="form-control" id="search" placeholder="Search here">
+                <label for="search" class="mb-0 ml-3"><i class="fas fa-search"></i></label>
+            </div>
+            <div class="d-flex align-items-center">
+                <div class="mr-3"><i class="fas fa-bell"></i></div>
+                <div class="user align-items-center">
+                    <img src="/assets/images/user.png" alt="user_img">
+                </div>
+            </div>
+        </div>
+        <div class="sidebar">
+            <ul class="mt-4">
+                <li>
+                    <a href="#">
+                        <i class="fas fa-th-large"></i>
+                        <div>Dashboard</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-user"></i>
+                        <div>Customer</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-chart-bar"></i>
+                        <div>Analytics</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-cog"></i>
+                        <div>Settings</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-question"></i>
+                        <div>Help</div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="main">
+            <div class="cards d-flex flex-wrap p-4">
+                <div class="business_card col-md p-3 d-flex justify-content-between align-items-center">
+                    <div class="card_content">
+                        <div class="card_number">1566</div>
+                        <div class="card_name">Total Revenue</div>
+                        <p class="mb-0">on the current month</p>
+                    </div>
+                    <div class="card_icon">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                </div>
+                <div class="business_card col-md p-3 mx-4 d-flex justify-content-between align-items-center">
+                    <div class="card_content">
+                        <div class="card_number">59</div>
+                        <div class="card_name">Daily Sales</div>
+                        <p class="mb-0">as default today</p>
+                    </div>
+                    <div class="card_icon">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                </div>
+                <div class="business_card col-md p-3 d-flex justify-content-between align-items-center">
+                    <div class="card_content">
+                        <div class="card_number">101</div>
+                        <div class="card_name">Daily Orders</div>
+                        <p class="mb-0">as default today</p>
+                    </div>
+                    <div class="card_icon">
+                        <i class="fas fa-sort-numeric-up-alt"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="charts d-flex flex-wrap justify-content-between align-items-center pt-0 pb-4 px-4">
+                <div class="business_chart p-3">
+                    <h2>Orders revenue by location</h2>
+                    <canvas id="chart_1"></canvas>
+                </div>
+                <div class="business_chart p-3">
+                    <h2>Sales by location</h2>
+                    <canvas id="chart_2"></canvas>
+                </div>
+                <div class="business_chart p-3">
+                    <h2>Revenues based on months</h2>
+                    <canvas id="chart_3"></canvas>
+                </div>
+            </div>
+            <div class="charts d-flex flex-wrap justify-content-between align-items-center pt-0 pb-4 px-4">
+                <div class="business_chart2 p-3">
+                    <h2>Detailed Report</h2>
+                    <canvas id="chart_6"></canvas>
+                </div>
+                <div class="business_chart2 p-3" id="business_graph_chart">
+                    <h2>Sales by day</h2>
+                    <canvas id="chart_4"></canvas>
+                </div>
+            </div>
+            <div class="charts d-flex flex-wrap justify-content-center align-items-center pt-0 pb-4 px-4">
+                <div class="business_chart p-3 col-md-5">
+                    <h2>Users segregated by states</h2>
+                    <canvas id="chart_5"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
+    <script src="/chart1.js"></script>
+    <script src="/chart2.js"></script>
+    <script src="/chart3.js"></script>
+    <script src="/chart4.js"></script>
+    <script src="/chart5.js"></script>
+    <script src="/chart6.js"></script>
+    <script src="/js/script.js"></script>
+</body>
+</html>
